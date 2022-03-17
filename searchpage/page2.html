@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang ="En">
+
+    <head>
+        <title> Chef's Table recipes </title>
+    <!-- STYLESHEETS-->
+        <link rel="stylesheet" href = "./page2styles.css">
+        <script src="./page2.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" />
+    </head>
+
+    <body>
+
+        <header>
+
+        <!--NAV BAR-->
+
+            <nav>
+                <ul class = "navul"> 
+                    <li class ="navli" ><a href="./../homepage/chef table page1.html">Home</a></li>
+                    <li class ="navli"><a href="./../searchpage/page2.html">Recipes</a></li>
+                    <li class ="navli"><a id = "about" onclick ="open_about_us()" >About</a></li>
+                    <li style="float:right"><a href="https://www.bbcgoodfood.com/">Login</a></li>
+                    <li style="float:right"><a id ="sign_up" onclick ="open_sign_up()">Sign Up</a></li>
+                </ul>
+                <div id="nav_about_us" class="about_us_overlay" >
+                    <a id= "about_us_overlay_content"> 
+                        <h3> About Us: </h3>
+                        <p> We are Chef's Table a website created to help you easily find new and exciting recipes.<br> 
+                            We love to cook and trying new recipes and we hope that this website inspires you to try new recipes too.<br>
+                            Have fun!</p>
+                        <ul style="list-style-type:none">
+                            <li> We are: Emily, Helen, Polly & Siham </li>
+                            <li> Creating this website for our 'Code for Girls' course</li>
+                            <li> Collating recipes since March 2022 </li>
+                        </ul>
+                    </a>
+                    <button id = "close_about" onclick="close_about_us()"> &times;</button> <!--&times gives the X-->
+                </div>
+
+            </nav>
+
+        </header>
+
+                <!--'sign up' overlay when clicked from nav-->
+        <div id="nav_sign_up">
+            <div id="sign_up_overlay_content">
+                <h1> Create a new account</h1>
+                <p> join our community and save recipes</p>
+                <p style="font-style: italic"> (n.b.) saving account data doesn't work</p>
+                <div class="sign_up_element">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="sign_up_element">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="sign_up_element">
+                    <label for ="password"> Password</label>
+                    <input type="password" id="password">
+                </div>
+            </div>
+            <button id="submit_sign_up" onclick="close_thanks()">submit</button>
+            
+            <button id="close_sign_up" onclick="close_sign_up()">&times;</button>
+        </div>
+
+
+
+
+
+
+        <!-- TITLE  -->
+
+        <h1 class ="title">CHEF'S TABLE</h1>
+        <div class="header">
+            <h4>Japanese Recipes</h4>
+            <div class="wrapper">
+                <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                <input class="search" placeholder="Search..." type="text" id="searchBox">
+                <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+            </div> 
+        </div>
+
+        <main class = "main-body">
+            <!-- MAIN CONTENT -->
+
+            <!-- This is the whole searchbar -->
+            
+
+                <!-- RECIPE LIST -->
+            <div class="recipeDiv hide" id="recipeTemplate">
+                <div>
+                    <img class="recipeImage" src="./images/Okonomiyaki-pg13-363c802-03b59be.webp">
+                </div>
+                <h3 id="recipeTitle">Okonomiyaki</h3>
+                <p id="recipeDescription">Try this Japanese savoury pancake, made with cabbage and chunks of pork belly. It's a great way to use up leftovers</p>
+                <a href="" style="color: #000000">Click here</a>
+            </div>
+
+            <div id="recipeList" class="recipeList">
+
+
+
+            </div>
+        </main>
+
+    <!-- FOOTER-->
+
+        <footer>
+            <ul class ="navul">
+                <li class="navli"><a href="https://www.bbcgoodfood.com/">Contact Us</a></li>
+                <li class="navli"><a href="https://www.bbcgoodfood.com/">Help</a></li>
+                <li class=" navli"><a href="https://www.bbcgoodfood.com/">Terms & Conditions</a></li>
+                <li style="float:right"><a href="https://www.bbcgoodfood.com/">Subscribe to our newsletter</a></li>
+            </ul>
+        </footer>
+
+
+    </body>
+
+</html>

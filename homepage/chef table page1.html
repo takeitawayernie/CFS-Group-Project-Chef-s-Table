@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang ="En">
+
+<head>
+    <title> chefs table page1 </title>
+    <link rel="stylesheet" href = "./chefs table.css">
+    <script src="./chefs table.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" />
+</head>
+
+<body>
+
+<header>
+   <!-- <̶!̶-̶-̶h̶e̶a̶d̶e̶r̶ w̶i̶l̶l̶ b̶e̶ o̶n̶e̶ f̶l̶e̶x̶ b̶o̶x̶-̶-̶>--> 
+<!--nav bar is made of one un-ordered list in block display with floats-->
+<nav>
+    <ul class = "navul"> 
+        <li class ="navli" ><a href="./chef table page1.html">Home</a></li>
+        <li class ="navli"><a href="./../searchpage/page2.html">Recipes</a></li>
+        <li class ="navli"><a id = "about" onclick ="open_about_us()" >About</a></li>
+        <li style="float:right"><a id= "login" onclick ="open_login()">Login</a></li>
+        <li style="float:right"><a id ="sign_up" onclick ="open_sign_up()">Sign Up</a></li>
+    </ul>
+    <div id="nav_about_us" class="about_us_overlay" >
+        <a id= "about_us_overlay_content"> 
+            <h3> About Us: </h3>
+                <p> We are Chef's Table a website created to help you easily find new and exciting recipes.<br> 
+                    We love to cook and trying new recipes and we hope that this website inspires you to try new recipes too.<br>
+                    Have fun!</p>
+                <ul style="list-style-type:none">
+                    <li> We are: Emily, Helen, Polly & Siham </li>
+                    <li> Creating this website for our 'Code for Girls' course</li>
+                    <li> Collating recipes since March 2022 </li>
+                </ul>
+            
+        </a>
+        <button id = "close_about" onclick="close_about_us()"> &times;</button> <!--&times gives the X-->
+    </div>
+
+        <!--'sign up' overlay when clicked from nav-->
+        <div id="nav_sign_up">
+            <div id="sign_up_overlay_content">
+                <h1> Create a new account</h1>
+                <p> join our community and save recipes</p>
+                <p style="font-style: italic"> (n.b.) saving account data doesn't work</p>
+                    <div class="sign_up_element">
+                        <label>Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="sign_up_element">
+                        <label>Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="sign_up_element">
+                        <label> Password</label>
+                        <input type="password" id="password">
+                    </div>
+                 </div>
+            <button id="submit_sign_up" onclick="close_thx()">submit</button>
+            
+            <button id="close_sign_up" onclick="close_sign_up()">&times;</button>
+        </div>
+
+<!--login overlay-->
+<div id="nav_login">
+    <div class="login_overlay">
+        <h1>Please enter your account details<h1>
+        <div class="login_element">
+            <label >Email address</label>
+             <input type="email" id="login_name">
+        </div>
+        <div class ="login_element">
+            <label >Password</label>
+            <input type="password" id="password1">
+        </div>   
+    </div>
+    <button id="enter_login" onclick="welcome()">enter</button>
+    <button class="close_login" onclick="close_login()">&times;</button>
+</div>
+
+<div id= "nav_welcome">
+    <div class = "login_overlay">
+        <h1 id="welcome_banner"> welcome</h1> 
+        
+    </div>
+    <button class="close_login" onclick="close_welcome()">&times;</button>
+
+</div>
+
+
+</nav>
+
+</header>
+    <!-- title and food type choice -->
+
+    <h1 class ="title">CHEF'S TABLE</h1>
+        <div class="header">
+        <h4>What are you in the mood for today?</h4>
+    <!--    <h6> Click on an icon below for recipes</h6>-->
+        </div>
+
+    <div id="img-container"> 
+        <div class="food-icon-feature">
+            <div class="food-icon">
+                <a href="./../searchpage/page2.html?search=japanese">
+                <img src="./Food_Icons_SVG/JapaneseIcon.svg">
+                </a>
+            </div>
+            <p>Japanese</p>
+        </div>
+
+        <div class="food-icon-feature">
+            <div class="food-icon">
+                <a href="./../searchpage/page2.html?search=mexican">
+                <img src="./Food_Icons_SVG/MexicanIcon.svg">
+                </a>
+            </div>
+            <p>Mexican</p>
+        </div>
+
+        <div class="food-icon-feature">
+            <div class="food-icon">
+                <a href="./../searchpage/page2.html?search=traditional">
+                <img src="./Food_Icons_SVG/TraditionalIcon.svg">
+                </a>
+            </div>
+            <p>Traditional</p>
+        </div>
+
+        <div class="food-icon-feature">
+            <div class="food-icon">
+                <a href="./../searchpage/page2.html?search=vegetarian">
+                    <img src="./Food_Icons_SVG/VegIcon.svg">
+                </a>
+            </div>
+            <p>Vegetarian</p>
+        </div>
+
+        <div class="food-icon-feature">
+            <div class="food-icon">
+                <a href="./../searchpage/page2.html?search=sweet">
+                    <img src="./Food_Icons_SVG/SweetIcon.svg">
+                    </a>
+            </div>
+            <p>Sweet</p>
+        </div>
+    </div>
+
+<main class="main-body">
+
+    <!--main section is split into 3 vertical flexboxes a left section, middle section and a right section-->
+
+    <!--LEFT section content-->
+    <div class="main-body-child"> 
+        <div class="format-left-section">
+            <h3 class="left-section-child"> Search for cuisines</h3><!-- this should be a search box-->
+            <div class="left-section-child">
+                <h3> About Us: </h3>
+                <p> We are Chef's Table a website created to help you easily find new and exciting recipes.<br> 
+                    We love to cook and trying new recipes and we hope that this website inspires you to try new recipes too.<br>
+                    Have fun!</p>
+                <ul>
+                    <li> We are: Emily, Helen, Polly & Siham </li>
+                    <li> Creating this website for our 'Code for Girls' course</li>
+                    <li> Collating recipes since March 2022 </li>
+                </ul>
+            </div >
+
+                <div class="left-section-child-4">
+                    <img  class="img_sizing" src= "./CuttingTomatoes.jpg" alt="meal image">
+                </div>
+                
+        </div>
+    </div>
+
+    <!--the MIDDLE section-->
+    <div class="main-body-child-2">
+        <img class="img_sizing" src ="./FrenchToast.jpg" alt="cooking">
+    <div class="overlay">
+        <div class="text">
+            <h4>BREAKFAST</h4>
+            <p>breakfast and brunch recipes worth getting up for</p>
+        </div>
+        <div class="container-1">
+        <a href="https://bbcgoodfood.com/recipes/collection/breakfast-recipes" target="_blank"><button class="button">find recipes</button></a>
+        </div>
+    </div>
+    </div>
+
+    
+<!-- <p class="right-section-child-3"> New ideas:  New today, Fish in white sauce with peas
+</p> -->
+    <!--       <̶d̶i̶v̶ c̶l̶a̶s̶s̶=̶"̶f̶o̶r̶m̶a̶t̶-̶m̶i̶d̶d̶l̶e̶-̶c̶h̶i̶l̶d̶-̶2̶"̶>̶
+                <̶i̶m̶g̶ c̶l̶a̶s̶s̶=̶ "̶im̶a̶g̶e̶-̶s̶i̶z̶i̶n̶g̶"̶ s̶r̶c̶=̶ "̶.̶/̶f̶i̶s̶h̶-̶g̶r̶e̶g̶o̶r̶-̶m̶o̶s̶e̶r̶-̶Q̶G̶I̶J̶U̶q̶n̶E̶p̶C̶Y̶-̶u̶n̶s̶p̶l̶a̶s̶h̶.̶j̶p̶g̶"̶ a̶l̶t̶=̶"̶f̶i̶s̶h̶"̶>̶
+                <̶i̶m̶g̶ c̶l̶a̶s̶s̶=̶ "̶i̶m̶a̶g̶e̶-̶s̶i̶z̶i̶n̶g̶"̶ s̶r̶c̶ =̶ "̶.̶/̶p̶a̶s̶t̶a̶-̶c̶l̶a̶r̶k̶-̶d̶o̶u̶g̶l̶a̶s̶-̶1̶7̶Z̶U̶9̶B̶P̶y̶_̶Q̶4̶-̶u̶n̶s̶p̶l̶a̶s̶h̶.̶j̶p̶g̶"̶ a̶l̶t̶ =̶"̶p̶a̶s̶t̶a̶"̶>̶
+                <̶i̶m̶g̶ c̶l̶a̶s̶s̶=̶ "̶i̶m̶a̶g̶e̶-̶s̶i̶z̶i̶n̶g̶"̶ s̶r̶c̶ =̶ "̶.̶/̶v̶e̶g̶a̶n̶-̶e̶l̶l̶a̶-̶o̶l̶s̶s̶o̶n̶-̶2̶I̶x̶T̶g̶s̶g̶F̶i̶-̶s̶-̶u̶n̶s̶p̶l̶a̶s̶h̶.̶j̶p̶g̶"̶ a̶l̶t̶=̶"̶v̶e̶g̶a̶n̶"̶>̶
+                <̶i̶m̶g̶ c̶l̶a̶s̶s̶=̶ "̶i̶m̶a̶g̶e̶-̶s̶i̶z̶i̶n̶g̶"̶ s̶r̶c̶ =̶ "̶.̶/̶d̶e̶s̶s̶e̶r̶t̶-̶a̶l̶i̶o̶n̶a̶-̶g̶u̶m̶e̶n̶i̶u̶k̶-̶G̶A̶a̶u̶S̶S̶t̶i̶a̶3̶s̶-̶u̶n̶s̶p̶l̶a̶s̶h̶.̶j̶p̶g̶"̶ a̶l̶t̶=̶"̶d̶e̶s̶s̶e̶r̶t̶"̶>̶
+            <̶/̶d̶i̶v̶>̶
+
+
+    RIGHT section-->
+
+<div class="main-body-child">
+        <div class="format-right-section">
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">I feel like making...</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Pasta</a>
+                    <a href="#">Pizza</a>
+                    <a href="#">Stew</a>
+                    <a href="#">Burger</a>
+                    <a href="#">Cake</a>
+                    <a href="#">Salad</a>
+                </div>
+            </div>
+
+            <div class="right-section-child-2">
+                <img  class="img_sizing" src="./RecipeTablet.jpg" alt=" light bulb moment">
+            <div class="overlay">
+                <div class="text">NEW IDEAS<br>daily inspiration for you to browse and enjoy!<br>Todays special - fish pie with white wine sauce and peas</div>
+            </div>
+        </div>
+    </div>
+
+
+</main> 
+
+<footer>
+    <ul class ="navul">
+        <li class="navli"><a id="contact_form" onclick="open_contact_form()">Contact Us</a></li>
+        <li class=" navli"><a id="terms" onclick="open_terms()">Terms & Conditions</a></li>
+        <li style="float:right"><a id="subscribe_form" onclick="open_subscribe_form()">Subscribe to our newsletter</a></li>
+    </ul>
+
+    <div id="footer_contact_form">
+        <div id="contact_form_overlay_content">
+            <h1>Get in touch!</h1>
+            <p> How can we help you?</p>
+                <div class="contact_form_element">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="contact_form_element">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="contact_form_element">
+                    <label for ="question">How can we help you?</label>
+                    <input type="password" id="question">
+                </div>
+            </div>
+        <button id="submit_contact_form" onclick="close_thanks()">submit</button>
+        
+        <button id="close_contact_form" onclick="close_contact_form()">&times;</button>
+    </div>
+
+    <div id="footer_terms" class="terms_overlay" >
+        <a id= "terms_overlay_content"> 
+            <h3>Terms and Conditions</h3>
+                <p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Chef Table's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
+                    The term 'Chef's Table' or 'us' or 'we' refers to the owner of the website whose registered office is 12 Baker Street, London. Our company registration number is 12345678. The term 'you' refers to the user or viewer of our website.
+                    The use of this website is subject to the following terms of use:
+                    <ul>
+                        <li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
+                        <li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, some personal information may be stored by us for use by third parties.</li>
+                        <li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+                        <li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
+                        <li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
+                        <li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>
+                        <li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
+                        <li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>
+                        <li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>
+                    </ul>
+                </p>
+        </a>
+        <button id = "close_terms" onclick="close_terms()"> &times;</button>
+    </div>
+
+    <div id="footer_subscribe_form">
+        <div id="subscribe_form_overlay_content">
+            <h1>Subscribe to our newsletter</h1>
+            <p>recieve weekly updates and all the latest recipes</p>
+                <div class="subscribe_form_element">
+                    <label for="email">Enter your email address</label>
+                    <input type="email" id="email">
+                </div>
+            </div>
+        <button id="submit_subscribe_form" onclick="close_thanks()">submit</button>
+        
+        <button id="close_subscribe_form" onclick="close_subscribe_form()">&times;</button>
+    </div>
+
+
+</footer>
+
+
+</body>
+
+
+
+
+
+</html>

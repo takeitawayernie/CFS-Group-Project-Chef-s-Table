@@ -1,0 +1,653 @@
+
+/* formatting the header & footer*/
+
+/*.page{ }*/
+
+body {
+    margin:	0% 0% 0% 0%;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: poppins;
+}
+
+
+.navul {
+/*  font-family: Poppins;*/
+    list-style-type: none;
+    margin: 0%;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 104, 97);
+    
+}
+
+.navli {float: left;
+    }
+a {
+    display: block;
+    padding: 14px;
+    color: white;
+}
+
+li a:hover {
+    background-color: rgb(0, 62, 58);
+}
+
+.about_us_overlay {
+    height:30%;
+    width: 0;
+    position:fixed;
+    z-index:1; /* stacking order for overlay*/
+    background-color: rgb(0, 62, 58);
+    overflow:scroll;
+    transition: 0.5s;
+
+}
+
+#about_us_overlay_content {
+    position:relative;
+    top:20%;
+    width:100%;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    display: block;
+}
+
+#close_about {
+    position: absolute;
+    top:20px;
+    right:45px;
+    font-size: 30px;
+}
+
+/* formatting the sign up overlay*/
+
+#nav_sign_up{
+    position: absolute;
+    top:8%;
+    right:0%;
+    width:50%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+#sign_up_overlay_content{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.sign_up_element label{
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.sign_up_element input{
+    width:50%;
+    padding:2px;
+    height:25px;
+
+}
+
+#submit_sign_up{
+    margin-left: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height:35px;
+}
+
+#close_sign_up {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+/*formatting the login overlay*/
+
+#nav_login{
+    position: absolute;
+    top:8%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+.login_overlay{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.login_element label{
+    padding-top: 1%;
+    font-size: medium;
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.login_element input{
+    width:70%;
+    padding:2px;
+    height:25px;
+
+}
+
+#enter_login{
+margin-top: 10px;
+margin-bottom: 30px;
+margin-left: 50%;
+height:35px;
+}
+
+.close_login {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+#nav_welcome {
+    position: absolute;
+    top:8%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+
+}
+
+#welcome_banner {
+    color: white;
+    font-size: medium;
+}
+
+
+/* TITLE formatting*/
+
+.title{
+    font-family: Poppins;
+    font-size:250%;
+    letter-spacing: 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 104, 97);
+    padding-top: 40px;
+    margin: 0;
+}
+
+.header {
+    font-family: Oooh Baby;
+    font-size: 140%;
+    text-align: center;
+    color: rgb(113, 113, 113);
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+/* Icon Formatting */
+
+#img-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    margin-left: 260px;
+    margin-right: 260px;
+    font-size: 12px;
+    color: rgb(113, 113, 113);
+}
+
+.food-icon-feature{
+    text-align: center;
+}
+
+div .food-icon {
+    transition: transform .2s;
+}
+
+div .food-icon:hover {
+        -ms-transform: scale(1.3); /* IE 9 */
+        -webkit-transform: scale(1.3); /* Safari 3-8 */
+        transform: scale(1.3); 
+    }
+
+
+div.food-icon img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* .responsive {
+    text-align: center;
+    padding: 0 2px;
+    float: left;
+    width: 14%;
+} */
+
+
+/* formatting the main body into 3 columns*/
+.main-body{
+    display:flex;
+    max-width: 100vw;
+    height: 45vw;
+    padding-top: 2vw;
+/*    background-color: rgb(25, 92, 77); */  
+    padding-bottom: 2vw;
+    margin: 0% 5% 0% 5%;
+}
+.main-body-child{
+    flex-basis: 30vw;
+  /*  background-color:pink; */
+    } 
+
+.main-body-child-2{
+    justify-content: center;
+    height:100%;
+    min-width: 5vw;
+    flex-grow: 1;
+
+    }
+/*
+formatting the left section
+ */
+    
+    .format-left-section{
+        display:flex;
+        flex-direction: column;
+        flex-wrap:none;
+        height:45vw;
+        padding-right: 5%;
+        padding-left: 5%;
+        background-color: rgb(255, 255, 255); 
+    }
+
+
+    .left-section-child{ 
+        min-height: 2vw;
+        background-color: rgb(255, 255, 255);
+        padding-bottom: 2vw;
+        font-size: 15px;
+        color: rgb(113, 113, 113);
+
+    
+    }  
+    .left-section-child-4{
+        max-width: 100%;
+        min-height: 15vw;
+        flex-grow: 1;
+/* 
+        background-color: #111;
+    */
+    }
+
+    /*image sizing to fit box used in left and right columns*/
+    .img_sizing{
+        height: 0;
+        min-height: 100%;
+        width:0;
+        min-width: 100%;
+    }
+
+
+    .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffffd4;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+    }
+    
+    .text {
+        color: rgb(113, 113, 113);
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /*
+    formatting the middle section
+    */
+
+    .format-middle{
+        display:flex;
+        flex-direction:column;
+        background-color: rgb(255, 255, 255);
+        height:45vw;
+    }
+
+    .main-body-child-2 {
+        min-height: 45vw;
+        flex-grow: 1;
+        position: relative;
+        max-width: 100%;
+    }
+    
+    .main-body-child-2:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+
+    .button {
+        background-color: #ff6b01;
+        border: none;
+        border-radius: 18px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+
+    .container-1 {
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* .format-middle-child-1{
+        min-height:5vw;
+        text-align: center;
+        font-size: 200%;
+    } */
+
+/* 
+    .format-middle-child-2{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    } */
+/* 
+    /̶*̶.̶i̶m̶a̶g̶e̶-̶s̶i̶z̶i̶n̶g̶{̶
+        m̶a̶x̶-̶w̶i̶d̶t̶h̶:̶ 5̶0̶%̶;̶
+        m̶a̶x̶-̶h̶e̶i̶g̶h̶t̶:̶ 5̶0̶%̶;̶
+    }̶*̶/̶
+    */
+/* 
+    .format-middle-child-3{
+    height: 200px;
+    padding-top: 20px;
+    flex-grow:1;
+    }
+     */
+
+    /*
+    formatting the right section
+    */
+
+    .format-right-section{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: none;
+        background-color:rgb(255, 255, 255);
+        height: 45vw;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+/*
+    formatting the dropdown
+    */
+
+.dropbtn {
+    min-height: 5vw;
+    background-color:rgb(0, 104, 97);
+    color: rgb(255, 255, 255);
+    padding: 2vw;
+    margin-bottom: 2vw;
+    font-size: 18px;
+    border: 10px;
+    cursor: pointer;
+    width: 100%;
+    /*
+    f̶o̶n̶t̶-̶f̶a̶m̶i̶l̶y̶:̶ P̶o̶p̶p̶i̶n̶s̶;̶
+    */
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(0, 159, 149);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/*
+.̶r̶i̶g̶h̶t̶-̶s̶e̶c̶t̶i̶o̶n̶-̶c̶h̶i̶l̶d̶{̶
+    m̶i̶n̶-̶h̶e̶i̶g̶h̶t̶:̶ 5̶v̶w̶;̶
+    b̶a̶c̶k̶g̶r̶o̶u̶n̶d̶-̶c̶o̶l̶o̶r̶:̶ w̶h̶i̶t̶e̶;̶
+}̶
+*/
+
+.right-section-child-2{
+    min-height: 35vw;
+    flex-grow: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+/* 
+/* background-color:green;*/
+
+
+.right-section-child-2:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+/* contact us pop up */
+
+#footer_contact_form{
+    position: absolute;
+    top:72%;
+    left:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+#contact_form_overlay_content{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.contact_form_element label{
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.contact_form_element input{
+    width:50%;
+    padding:2px;
+    height:25px;
+
+}
+
+#submit_contact_form{
+    margin-left: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height:35px;
+}
+
+#close_contact_form {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+/* Subscribe pop up */
+
+#footer_subscribe_form{
+    position: absolute;
+    top:72%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+#subscribe_form_overlay_content{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.subscribe_form_element label{
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.subscribe_form_element input{
+    width:50%;
+    padding:2px;
+    height:25px;
+
+}
+
+#submit_subscribe_form{
+    margin-left: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height:35px;
+}
+
+#close_subscribe_form {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+/* Terms and conditions formatting */
+
+.terms_overlay {
+    position:absolute;
+    top: 72%;
+    right: 0%;
+    left: 0%;
+    height: 50%;
+    width: 0;
+    z-index:1; /* stacking order for overlay*/
+    background-color: rgb(0, 62, 58);
+    overflow:scroll;
+    transition: 0.5s;
+}
+
+
+#terms_overlay_content {
+    position:relative;
+    top:10%;
+    width:60%; 
+    left: 20%;
+    right: 20%;  
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    display: block;
+}
+
+#close_terms {
+    position: absolute;
+    top:20px;
+    right:45px;
+    font-size: 30px;
+}
+
+
+
+
+
+/* .right-section-child-3{
+    text-align: center;
+    text-justify: center;
+    margin-top: 2vw;
+    flex-grow: 1;
+background-color: #111; */
+/* 
+
