@@ -19,6 +19,8 @@ body {
     
 }
 
+
+
 .navli {float: left;
     }
 a {
@@ -112,6 +114,75 @@ height:35px;
 
 }
 
+#nav_login{
+    position: absolute;
+    top:8%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+.login_overlay{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.login_element label{
+    padding-top: 1%;
+    font-size: medium;
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.login_element input{
+    width:70%;
+    padding:2px;
+    height:25px;
+
+}
+
+#enter_login{
+margin-top: 10px;
+margin-bottom: 30px;
+margin-left: 50%;
+height:35px;
+}
+
+.close_login {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+#nav_welcome {
+    position: absolute;
+    top:8%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+
+}
+
+#welcome_banner {
+    color: white;
+    font-size: medium;
+}
+
 /* TITLE formatting*/
 
 .title{
@@ -164,8 +235,10 @@ height:35px;
     width: 250px;
     float: left; 
     margin: 0px 15px 15px 0px;
-
 }
+
+
+
     
 .recipeDiv {
     height: 260px;
@@ -208,6 +281,8 @@ height:35px;
   .recipeList {
     width: 100%;
 }
+
+
 
   .search {
     border: 1px solid grey;
@@ -257,4 +332,156 @@ height:35px;
     text-align: center;
 }
 
+/* contact us pop up */
 
+#footer_contact_form{
+    position: fixed;
+    bottom:8%;
+    left:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+#contact_form_overlay_content{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.contact_form_element label{
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.contact_form_element input{
+    width:50%;
+    padding:2px;
+    height:25px;
+
+}
+
+#submit_contact_form{
+    margin-left: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height:35px;
+}
+
+#close_contact_form {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+/* Subscribe pop up */
+
+#footer_subscribe_form{
+    position: fixed;
+    bottom:7%;
+    right:0%;
+    width:40%;
+    height:0%;
+    z-index: 1;
+    background-color: rgb(0, 62, 58);
+    overflow:hidden;
+    transition: 0.5;
+}
+
+
+#subscribe_form_overlay_content{
+    position:relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left:100px;
+    color: #ccc;
+    margin: 20px 0px;
+}
+
+.subscribe_form_element label{
+    width: 50%;
+    display:block;
+    color:#ccc;
+    margin-bottom:5px;
+    
+}
+.subscribe_form_element input{
+    width:50%;
+    padding:2px;
+    height:25px;
+
+}
+
+#submit_subscribe_form{
+    margin-left: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height:35px;
+}
+
+#close_subscribe_form {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+/* Terms and conditions formatting */
+
+.terms_overlay {
+    position:fixed;
+    bottom: 7%;
+    right: 0%;
+    left: 0%;
+    height: 50%;
+    width: 0;
+    z-index:1; /* stacking order for overlay*/
+    background-color: rgb(0, 62, 58);
+    overflow:scroll;
+    transition: 0.5s;
+}
+
+
+#terms_overlay_content {
+    position:relative;
+    top:10%;
+    width:60%; 
+    left: 20%;
+    right: 20%;  
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    display: block;
+}
+
+#close_terms {
+    position: absolute;
+    top:20px;
+    right:45px;
+    font-size: 30px;
+}
+
+
+/* footer format*/
+#footer {
+    /*  font-family: Poppins;*/
+      list-style-type: none;
+      position: fixed;
+      left:0;
+      bottom: 0;
+      margin: 0%;
+      padding: 0;
+      width:100%;
+      overflow: hidden;
+      background-color: rgb(0, 104, 97);
+}

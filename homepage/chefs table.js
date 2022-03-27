@@ -87,6 +87,8 @@ window.onclick = function(event) {
     }
 }
 
+
+
 // "Contact Form" open and close
 
 function open_contact_form(){
@@ -97,7 +99,7 @@ function close_contact_form(){
     document.getElementById("footer_contact_form").style.height = "0%";
 }
 
-function close_thanks(){
+function submit_contact(){
     
     document.getElementById("submit_contact_form").innerHTML = "Thank you";
 
@@ -138,3 +140,15 @@ function close_thanks(){
             document.getElementById("footer_subscribe_form").style.height = "0%";
         }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function(event) {
+        //console.log(event);
+        if (event.keyCode === 13) {
+            window.location.href = "./../searchpage/page2.html?search="+event.target.value;     
+        }
+    });
+})
+

@@ -21,7 +21,7 @@
                     <li class ="navli" ><a href="./../homepage/chef table page1.html">Home</a></li>
                     <li class ="navli"><a href="./../searchpage/page2.html">Recipes</a></li>
                     <li class ="navli"><a id = "about" onclick ="open_about_us()" >About</a></li>
-                    <li style="float:right"><a href="https://www.bbcgoodfood.com/">Login</a></li>
+                    <li style="float:right"><a id= "login" onclick ="open_login()">Login</a></li>
                     <li style="float:right"><a id ="sign_up" onclick ="open_sign_up()">Sign Up</a></li>
                 </ul>
                 <div id="nav_about_us" class="about_us_overlay" >
@@ -39,47 +39,67 @@
                     <button id = "close_about" onclick="close_about_us()"> &times;</button> <!--&times gives the X-->
                 </div>
 
-            </nav>
-
-        </header>
-
-                <!--'sign up' overlay when clicked from nav-->
-        <div id="nav_sign_up">
-            <div id="sign_up_overlay_content">
-                <h1> Create a new account</h1>
-                <p> join our community and save recipes</p>
-                <p style="font-style: italic"> (n.b.) saving account data doesn't work</p>
+    <!--'sign up' overlay when clicked from nav-->
+    <div id="nav_sign_up">
+        <div id="sign_up_overlay_content">
+            <h1> Create a new account</h1>
+            <p> join our community and save recipes</p>
+            <p style="font-style: italic"> (n.b.) saving account data doesn't work</p>
                 <div class="sign_up_element">
-                    <label for="name">Name</label>
+                    <label>Name</label>
                     <input type="text" id="name">
                 </div>
                 <div class="sign_up_element">
-                    <label for="email">Email</label>
+                    <label>Email</label>
                     <input type="email" id="email">
                 </div>
                 <div class="sign_up_element">
-                    <label for ="password"> Password</label>
+                    <label> Password</label>
                     <input type="password" id="password">
                 </div>
-            </div>
-            <button id="submit_sign_up" onclick="close_thanks()">submit</button>
-            
-            <button id="close_sign_up" onclick="close_sign_up()">&times;</button>
-        </div>
+             </div>
+        <button id="submit_sign_up" onclick="close_thx()">submit</button>
+        
+        <button id="close_sign_up" onclick="close_sign_up()">&times;</button>
+    </div>
 
+<!--login overlay-->
+<div id="nav_login">
+<div class="login_overlay">
+    <h1>Please enter your account details<h1>
+    <div class="login_element">
+        <label >Email address</label>
+         <input type="email" id="login_name">
+    </div>
+    <div class ="login_element">
+        <label >Password</label>
+        <input type="password" id="password1">
+    </div>   
+</div>
+<button id="enter_login" onclick="welcome()">enter</button>
+<button class="close_login" onclick="close_login()">&times;</button>
+</div>
 
+<div id= "nav_welcome">
+<div class = "login_overlay">
+    <h1 id="welcome_banner"> welcome</h1> 
+    
+</div>
+<button class="close_login" onclick="close_welcome()">&times;</button>
 
+</div>
 
+</nav>
 
+</header>
 
         <!-- TITLE  -->
 
         <h1 class ="title">CHEF'S TABLE</h1>
         <div class="header">
-            <h4>Japanese Recipes</h4>
-            <div class="wrapper">
+                <div class="wrapper">
                 <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-                <input class="search" placeholder="Search..." type="text" id="searchBox">
+                <input class="search" placeholder="Search..." type="text" id="searchBox"/>
                 <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
             </div> 
         </div>
@@ -109,14 +129,73 @@
 
     <!-- FOOTER-->
 
-        <footer>
-            <ul class ="navul">
-                <li class="navli"><a href="https://www.bbcgoodfood.com/">Contact Us</a></li>
-                <li class="navli"><a href="https://www.bbcgoodfood.com/">Help</a></li>
-                <li class=" navli"><a href="https://www.bbcgoodfood.com/">Terms & Conditions</a></li>
-                <li style="float:right"><a href="https://www.bbcgoodfood.com/">Subscribe to our newsletter</a></li>
-            </ul>
-        </footer>
+    <footer>
+        <ul id ="footer">
+            <li class="navli"><a id="contact_form" onclick="open_contact_form()">Contact Us</a></li>
+            <li class=" navli"><a id="terms" onclick="open_terms()">Terms & Conditions</a></li>
+            <li style="float:right"><a id="subscribe_form" onclick="open_subscribe_form()">Subscribe to our newsletter</a></li>
+        </ul>
+    
+        <div id="footer_contact_form">
+            <div id="contact_form_overlay_content">
+                <h1>Get in touch!</h1>
+                <p> How can we help you?</p>
+                    <div class="contact_form_element">
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="contact_form_element">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="contact_form_element">
+                        <label for ="question">How can we help you?</label>
+                        <input type="password" id="question">
+                    </div>
+                </div>
+            <button id="submit_contact_form" onclick="submit_contact()">submit</button>
+            
+            <button id="close_contact_form" onclick="close_contact_form()">&times;</button>
+        </div>
+    
+        <div id="footer_terms" class="terms_overlay" >
+            <a id= "terms_overlay_content"> 
+                <h3>Terms and Conditions</h3>
+                    <p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Chef Table's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
+                        The term 'Chef's Table' or 'us' or 'we' refers to the owner of the website whose registered office is 12 Baker Street, London. Our company registration number is 12345678. The term 'you' refers to the user or viewer of our website.
+                        The use of this website is subject to the following terms of use:
+                        <ul>
+                            <li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
+                            <li>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, some personal information may be stored by us for use by third parties.</li>
+                            <li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+                            <li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
+                            <li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
+                            <li>All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>
+                            <li>Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
+                            <li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>
+                            <li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.</li>
+                        </ul>
+                    </p>
+            </a>
+            <button id = "close_terms" onclick="close_terms()"> &times;</button>
+        </div>
+    
+        <div id="footer_subscribe_form">
+            <div id="subscribe_form_overlay_content">
+                <h1>Subscribe to our newsletter</h1>
+                <p>recieve weekly updates and all the latest recipes</p>
+                    <div class="subscribe_form_element">
+                        <label for="email">Enter your email address</label>
+                        <input type="email" id="email">
+                    </div>
+                </div>
+            <button id="submit_subscribe_form" onclick="close_thanks()">submit</button>
+            
+            <button id="close_subscribe_form" onclick="close_subscribe_form()">&times;</button>
+        </div>
+    
+    
+    </footer>
 
 
     </body>
